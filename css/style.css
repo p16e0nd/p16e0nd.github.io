@@ -180,6 +180,13 @@ body {
     margin: 0 0.833333333333333%;
   }
 }
+@font-face {
+  font-family: 'Papyrus';
+  src: url("fonts/Papyrus.ttc") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 .article-date,
 .article-category-link,
 .archive-year,
@@ -341,9 +348,19 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("images/banner.png") center #000;
+  background: url("images/banner-mobile.png") center #000;
   background-size: cover;
   z-index: -1;
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  #banner {
+    background-image: url("images/banner.png");
+  }
+}
+@media screen and (min-width: 768px) {
+  #banner {
+    background-image: url("images/banner-desktop.png");
+  }
 }
 #header-title {
   text-align: center;
@@ -364,10 +381,11 @@ body {
   font-size: 60px;
   line-height: 60px;
   letter-spacing: 2px;
-  background: -webkit-linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
-  background: -moz-linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
-  background: -ms-linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
-  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+  font-family: 'Papyrus', "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: -webkit-linear-gradient(45deg, #f875bb, #df6ef5, #8b6bff, #7698ff);
+  background: -moz-linear-gradient(45deg, #f875bb, #df6ef5, #8b6bff, #7698ff);
+  background: -ms-linear-gradient(45deg, #f875bb, #df6ef5, #8b6bff, #7698ff);
+  background: linear-gradient(45deg, #f875bb, #df6ef5, #8b6bff, #7698ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
